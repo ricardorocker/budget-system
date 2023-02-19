@@ -22,7 +22,7 @@ export class HomeComponent {
       title: 'Grupo de Despesas',
       text: 'Organize suas despesas por grupos.',
       routerLink: '/grupo-despesas',
-      btnText: 'Cadastrar Grupo de Despesas'
+      btnText: 'Cadastrar Grupo'
     },
     {
       img: '/assets/expenses.png',
@@ -47,6 +47,14 @@ export class HomeComponent {
       text: 'Registre suas receitas.',
       routerLink: '/receitas',
       btnText: 'Cadastrar Receitas'
-    }
+    },
+    // {
+    //   img: '/assets/salary.jpg',
+    //   alt: 'Investimentos',
+    //   title: 'Investimentos',
+    //   text: 'Registre seus investimentos.',
+    //   routerLink: '/investimentos',
+    //   btnText: 'Cadastrar Investimento'
+    // }
   ];
 }

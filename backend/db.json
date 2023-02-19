@@ -1,0 +1,30 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nameCategory": "Moradia"
+    },
+    {
+      "id": 2,
+      "nameCategory": "Cartão Crédito"
+    },
+    {
+      "id": 3,
+      "nameCategory": "Outros"
+    }
+  ],
+  "expenses": [
+    {
+      "id": 1,
+      "nameExpense": "Latam Pass",
+      "category": 2,
+      "expirationDate": 7
+    },
+    {
+      "id": 2,
+      "nameExpense": "Aluguel",
+      "category": 1,
+      "expirationDate": 5
+    }
+  ]
+}

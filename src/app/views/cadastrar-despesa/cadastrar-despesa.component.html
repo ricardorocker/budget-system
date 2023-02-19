@@ -7,23 +7,21 @@
     </div>
     <div class="form-row">
       <div class="form-group col-md-12">
-        <label for="nomeDespesa">Nome da Despesa</label>
-        <input type="text" class="form-control" id="nomeDespesa" formControlName="nomeDespesa">
+        <label for="nameExpense">Nome da Despesa*</label>
+        <input type="text" class="form-control" id="nameExpense" formControlName="nameExpense" placeholder="Digite um nome">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-8">
-        <label for="grupoDespesa">Grupo da Despesa</label>
-        <select id="grupoDespesa" class="form-control" formControlName="grupoDespesa">
-          <option value="Alimentacao">Alimentação</option>
-          <option value="Transporte">Transporte</option>
-          <option value="Moradia">Moradia</option>
-          <option value="Outros">Outros</option>
+        <label for="category">Categoria da Despesa*</label>
+        <select id="category" class="form-control" formControlName="category">
+          <option value="">Escolha uma categoria</option>
+          <option *ngFor="let category of categories" [value]="category.id">{{ category.nameCategory }}</option>
         </select>
       </div>
       <div class="form-group col-md-4">
-        <label for="dataVencimento">Vencimento</label>
-        <input type="number" class="form-control" id="dataVencimento" formControlName="dataVencimento" min="1" max="31">
+        <label for="expirationDate">Vencimento*</label>
+        <input type="number" class="form-control" id="expirationDate" formControlName="expirationDate" min="1" max="31" placeholder="Número">
       </div>
     </div>
     <div class="d-flex justify-content-center mt-3">
