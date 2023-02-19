@@ -10,6 +10,7 @@ import { HomeComponent } from './views/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CadastrarDespesaComponent } from './views/cadastrar-despesa/cadastrar-despesa.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RegisterCardComponent } from './components/register-card/register-card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     NavbarComponent,
     CadastrarDespesaComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterCardComponent
   ],
   imports: [
     BrowserModule,

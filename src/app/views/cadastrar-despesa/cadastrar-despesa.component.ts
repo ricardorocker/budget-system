@@ -10,21 +10,25 @@ import { CategoryService } from './../../services/category.service';
   styleUrls: ['./cadastrar-despesa.component.css']
 })
 export class CadastrarDespesaComponent implements OnInit {
-  myForm!: FormGroup;
+  form!: FormGroup;
   categories: Category[] = [];
 
   constructor(
-    private form: FormBuilder,
+    private formBuilder: FormBuilder,
     private categoryService: CategoryService
-    ) { }
-
-  ngOnInit() {
-    this.myForm = this.form.group({
+  ) {
+    this.form = this.formBuilder.group({
       category: ['', Validators.required],
       nameExpense: ['', Validators.required],
       expirationDate: ['', Validators.required]
     });
+  }
 
+  ngOnInit() {
+    this.getCategorySelect();
+  }
+
+  getCategorySelect(): void {
     this.categoryService.getCategories().subscribe((categories) => {
       this.categories = categories
       console.log(this.categories)
@@ -32,7 +36,7 @@ export class CadastrarDespesaComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.myForm.value);
+    console.log('Entrou no onSubmit()');
   }
 
 }

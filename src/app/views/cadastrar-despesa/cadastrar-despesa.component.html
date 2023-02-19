@@ -1,10 +1,6 @@
-<div class="container d-flex justify-content-center mt-5 p-5 bg-white shadow" style="max-width: 500px;">
-  <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="col-md-12">
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <h2 class="text-center mb-3">Cadastrar Despesa</h2>
-      </div>
-    </div>
+<app-register-card [title]="'Cadastrar Despesa'" (clickEvent)="onSubmit()">
+
+  <form [formGroup]="form" class="col-md-12">
     <div class="form-row">
       <div class="form-group col-md-12">
         <label for="nameExpense">Nome da Despesa*</label>
@@ -13,7 +9,7 @@
     </div>
     <div class="form-row">
       <div class="form-group col-md-8">
-        <label for="category">Categoria da Despesa*</label>
+        <label for="category">Grupo da Despesa*</label>
         <select id="category" class="form-control" formControlName="category">
           <option value="">Escolha uma categoria</option>
           <option *ngFor="let category of categories" [value]="category.id">{{ category.nameCategory }}</option>
@@ -24,9 +20,6 @@
         <input type="number" class="form-control" id="expirationDate" formControlName="expirationDate" min="1" max="31" placeholder="Número">
       </div>
     </div>
-    <div class="d-flex justify-content-center mt-3">
-      <button type="submit" class="btn btn-dark mx-2" [disabled]="!myForm.valid">Cadastrar</button>
-      <button type="submit" class="btn btn-dark mx-2" routerLink="/">Cancelar</button>
-    </div>
   </form>
-</div>
+
+</app-register-card>
