@@ -1,0 +1,16 @@
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px -5px #ccc;
+  transition: all 0.2s;
+}
+
+.card-img-top {
+  height: 140px;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .row {
+    flex-direction: column;
+  }
+}

@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { DefaultLayoultComponent } from './components/default-layoult/default-layoult.component';
 import { HomeComponent } from './views/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CadastrarDespesaComponent } from './views/cadastrar-despesa/cadastrar-despesa.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DefaultLayoultComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CadastrarDespesaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
